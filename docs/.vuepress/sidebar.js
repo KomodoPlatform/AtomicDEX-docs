@@ -420,10 +420,10 @@ var sidebar = [
     title: "AtomicDEX",
     collapsible: true,
     children: [
-        [
-            "/basic-docs/atomicdex/introduction-to-atomicdex.md",
-            "Introduction to AtomicDEX Documentation"
-        ],
+        // [
+            // "/basic-docs/atomicdex/introduction-to-atomicdex.md",
+            // "Introduction to AtomicDEX Documentation"
+        // ],
         {
             title: "AtomicDEX Setup",
             collapsible: true,

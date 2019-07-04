@@ -1,53 +1,38 @@
-<!--Sidd: Since the below HTML content is not a repeating element, I'm not going to create a unique component, nor a separate CSS class at this time.-->
+# Introduction to AtomicDEX
 
-<div>
+Welcome to the AtomicDEX technical documentation.
 
-<div class="introductoryImage">
+#### About the AtomicDEX Section
 
-<img src="/start-here-pics/Dev_Docs_Introduction_small.png">
+This documentation is intended for developers utilizing the AtomicDEX API.
 
-</div>
+Users who are not interested in development-related activities, but are searching for documentation assistance, can find support in the Komodo Support Center.
 
-<h1>Introduction</h1>
+[<b>Link to Komodo Support Center</b>](https://support.komodoplatform.com/support/home)
 
-<div style="width: 4rem; height: .5rem; margin: .1rem 0rem 2rem .3rem; background-color: #18F4BF;"></div>
+#### Conceptual Overview
 
-<h4>Welcome to Komodo's Developer Documentation.</h4>
+A brief conceptual overview of AtomicDEX can be found in the <b>Start Here</b> > <b>Product Introductions</b> > <b>AtomicDEX </b> section.
 
-<div class="mobileIntroductoryImage">
+[<b>Link to "AtomicDEX" Introduction</b>](../basic-docs/start-here/about-komodo-platform/product-introductions.html#AtomicDEX)
 
-<img src="/start-here-pics/Dev_Docs_Introduction_small.png">
+The [<b>AtomicDEX Tutorials</b>](../basic-docs/atomicdex/atomicdex-tutorials/introduction-to-atomicdex.md) section contains a more thorough conceptual explanation of AtomicDEX.
 
-</div>
+Please consult our [Learning Path Outlines](../basic-docs/start-here/learning-launchpad/learning-path-outlines.html#type-b-developers-smart-chains) section for more details on approaches to learning AtomicDEX from both a conceptual and technical perspective.
 
-</div>
+#### About AtomicDEX Setup
 
-<hr style="clear: both;">
+The AtomicDEX Setup section contains basic information about setting up and using an AtomicDEX-enabled environment.
 
-Komodo's blockchain technology enables developers to create fully independent blockchains in a secure and highly competitive environment.
+#### About AtomicDEX Tutorials
 
-Each independent blockchain built on the Komodo framework has a wide range of capabilities, including:
+The AtomicDEX Tutorials section contains various tutorials that provide instruction for AtomicDEX usage and creation.
 
-* Bitcoin-hash rate supported security
+For a walkthrough covering multiple tutorials in a targeted fashion, please see the [Learning Launchpad](../basic-docs/start-here/learning-launchpad/learning-path-outlines.html) section.
 
-* Enterprise-level scalability
+#### About AtomicDEX API
 
-* Consensus customization
+The AtomicDEX API section contains all available API commands.
 
-* Blockchain clustering
+These API commands can also be called Remote Procedure Calls, or RPCs.
 
-* ...and more!
-
-Because a Komodo-based blockchain is independently managed, the developer has complete freedom, so long as the essential connections to the Komodo ecosystem remain.
-
-
-[Get Started →](./basic-docs/start-here/about-komodo-platform/about-komodo-platform.html)
-
-<!-- Sidd: Divs below cause issues when loading page. Very ugly, and blinks. 
-
-<div class="introductionLinkDiv">
-
-<a class="introductionLink" href="../basic-docs/start-here/outline-for-new-developers.html">Get Started →</a>
-
-</div>
--->

@@ -42,13 +42,10 @@ module.exports = {
       apiKey: algoliaSecret.key,
       indexName: 'komodoplatform'
     },
-    nav: [{
-        text: "Start Here",
-        link: "/basic-docs/start-here/about-komodo-platform/about-komodo-platform.md"
-      },
+    nav: [
       {
-        text: "KomodoPlatform.com",
-        link: "https://komodoplatform.com"
+        text: "AtomicDEX.io",
+        link: "https://atomicdex.io"
       }
     ],
     sidebar: {
