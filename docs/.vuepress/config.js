@@ -37,7 +37,7 @@ module.exports = {
     editLinkText: "Suggest an improvement for this page",
     lastUpdated: "Last Updated",
     // sidebarDepth: 3,
-    logo: "/KMD_Horiz_White.svg",
+    logo: "/logo_light.svg",
     algolia: {
       apiKey: algoliaSecret.key,
       indexName: 'komodoplatform'
