@@ -12,13 +12,7 @@ Users who are not interested in development-related activities, but are searchin
 
 #### Conceptual Overview
 
-A brief conceptual overview of AtomicDEX can be found in the <b>Start Here</b> > <b>Product Introductions</b> > <b>AtomicDEX </b> section.
-
-[<b>Link to "AtomicDEX" Introduction</b>](../basic-docs/start-here/about-komodo-platform/product-introductions.html#AtomicDEX)
-
-The [<b>AtomicDEX Tutorials</b>](../basic-docs/atomicdex/atomicdex-tutorials/introduction-to-atomicdex.md) section contains a more thorough conceptual explanation of AtomicDEX.
-
-Please consult our [Learning Path Outlines](../basic-docs/start-here/learning-launchpad/learning-path-outlines.html#type-b-developers-smart-chains) section for more details on approaches to learning AtomicDEX from both a conceptual and technical perspective.
+The [<b>AtomicDEX Tutorials</b>](../basic-docs/atomicdex/atomicdex-tutorials/introduction-to-atomicdex.md) section contains a thorough conceptual explanation of AtomicDEX.
 
 #### About AtomicDEX Setup
 
@@ -27,8 +21,6 @@ The AtomicDEX Setup section contains basic information about setting up and usin
 #### About AtomicDEX Tutorials
 
 The AtomicDEX Tutorials section contains various tutorials that provide instruction for AtomicDEX usage and creation.
-
-For a walkthrough covering multiple tutorials in a targeted fashion, please see the [Learning Launchpad](../basic-docs/start-here/learning-launchpad/learning-path-outlines.html) section.
 
 #### About AtomicDEX API
 

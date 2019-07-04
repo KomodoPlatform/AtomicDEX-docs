@@ -16,7 +16,7 @@ In April 2014, Komodo’s lead developer experimented with his first atomic-swap
 
 To understand AtomicDEX, one must first understand what a decentralized exchange is, why it is important, and how atomic swaps come into play.
 
-This discussion requires a small amount of foundational knowledge. The reader should be generally familiar with blockchain technology and should understand the basic ideas of the Komodo project. If an overview of Komodo is needed, head to the documentation introduction, ["Why Komodo?"](../start-here/outline-for-new-developers.html#why-komodo) For a more thorough understanding of general blockchain technology, check out [Part I of the Komodo whitepaper.](https://komodoplatform.com/whitepaper) This section of the whitepaper gives an overview of how a blockchain works and why it matters. After reading those articles, the following discussion should be attainable.
+This discussion requires a small amount of foundational knowledge. The reader should be generally familiar with blockchain technology. If necessary, read [Part I of the Komodo whitepaper.](https://komodoplatform.com/whitepaper) This section of the whitepaper gives an overview of how a blockchain works and why it matters. After reading those articles, the following discussion should be attainable.
 
 ## Understanding the Most Common Method of Cryptocurrency Exchange
 
