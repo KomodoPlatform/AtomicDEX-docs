@@ -22,15 +22,15 @@ module.exports = {
       "link",
       {
         rel: "icon",
-        href: "KMD_Mark_Black.png"
+        href: "mark_only.svg"
       }
     ]
   ],
-  title: "Komodo Documentation",
+  title: "AtomicDEX Documentation",
   base: "/",
-  description: "Documentation for developers building on Komodo",
+  description: "Documentation for developers building on AtomicDEX",
   themeConfig: {
-    repo: "komodoplatform/developer-docs",
+    repo: "siddhartha-crypto/atomicdex-docs-clone-of-dev-docs",
     repoLabel: "Github",
     docsDir: "docs",
     editLinks: true,
