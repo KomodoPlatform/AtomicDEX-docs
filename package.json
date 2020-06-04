@@ -1,0 +1,26 @@
+{
+  "name": "docs",
+  "description": "dev docs for Komodo Platform",
+  "keywords": [
+    "documentation",
+    "komodo",
+    "developer"
+  ],
+  "author": "Contributors from Komodo Platform",
+  "license": "MIT",
+  "devDependencies": {
+    "@vuepress/plugin-google-analytics": "^1.0.2",
+    "vuepress": "^1.0.3",
+    "vuepress-plugin-redirect": "1.2.0-alpha.0"
+  },
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "dependencies": {
+    "dotenv": "^8.0.0",
+    "js-yaml": "^3.13.1",
+    "lodash": "^4.17.13",
+    "vuetify": "^1.5.0"
+  }
+}
