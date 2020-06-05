@@ -23,9 +23,6 @@ module.exports = {
         scrollOffset: 0,
       },
     },
-    "vuepress-plugin-google-tag-manager": {
-      gtm: "GTM-PC28587",
-    },
   },
   head: [
     [

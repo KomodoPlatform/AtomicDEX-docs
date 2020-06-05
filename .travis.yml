@@ -4,7 +4,6 @@ node_js:
 install:
   - yarn install
 script:
-  - git fetch --unshallow
   - ./algolia-key.sh
   - yarn docs:build
   - echo 'developers.atomicdex.io' > docs/.vuepress/dist/CNAME
