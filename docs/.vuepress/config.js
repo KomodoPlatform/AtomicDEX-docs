@@ -1,6 +1,8 @@
 require("dotenv").config();
 var redirectAliases = require("./public/_redirects.js");
 var sidebarImport = require("./sidebar.js");
+var navbarImport = require("./navbar.js");
+
 // var algoliaSecret = require("./algolia-secret.js")
 module.exports = {
   plugins: {
@@ -85,17 +87,7 @@ module.exports = {
     // apiKey: algoliaSecret.key,
     // indexName: 'komodoplatform'
     // },
-    nav: [
-      {
-        text: "AtomicDEX.io",
-        link: "https://atomicdex.io",
-      },
-    ],
-    sidebar: {
-      "/basic-docs/": sidebarImport,
-
-      // Repeat everything from above
-      "/": sidebarImport,
-    },
+    nav: navbarImport,
+    sidebar: sidebarImport,
   },
 };
