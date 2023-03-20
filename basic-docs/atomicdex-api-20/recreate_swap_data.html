@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>recreate_swap_data | AtomicDEX Documentation</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="mark_only.svg">
+    <meta name="description" content="Documentation for developers building on AtomicDEX">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@komodoplatform">
+    <meta name="twitter:title" content="Komodo Developer Documentation">
+    <meta name="twitter:description" content="Documentation for developers building on the Komodo Platform">
+    <meta name="twitter:image" content="https://developers.komodoplatform.com/start-here-pics/Dev_Docs_Introduction_small.png">
+    <link rel="preload" href="/assets/css/0.styles.075bd052.css" as="style"><link rel="preload" href="/assets/js/app.7d6b3bfc.js" as="script"><link rel="preload" href="/assets/js/5.a7a1516b.js" as="script"><link rel="preload" href="/assets/js/4.fb8bc2c9.js" as="script"><link rel="preload" href="/assets/js/40.804b96ee.js" as="script"><link rel="preload" href="/assets/js/6.e14e0cf2.js" as="script"><link rel="prefetch" href="/assets/js/10.d19c277a.js"><link rel="prefetch" href="/assets/js/100.ecf60c93.js"><link rel="prefetch" href="/assets/js/101.32facfba.js"><link rel="prefetch" href="/assets/js/102.0917252c.js"><link rel="prefetch" href="/assets/js/103.4c6ccaad.js"><link rel="prefetch" href="/assets/js/104.51e64225.js"><link rel="prefetch" href="/assets/js/105.2dbfdcb8.js"><link rel="prefetch" href="/assets/js/106.def28188.js"><link rel="prefetch" href="/assets/js/107.bc3a10f3.js"><link rel="prefetch" href="/assets/js/108.c6cee7b1.js"><link rel="prefetch" href="/assets/js/109.13d4a98a.js"><link rel="prefetch" href="/assets/js/11.fd9c0303.js"><link rel="prefetch" href="/assets/js/110.061207e3.js"><link rel="prefetch" href="/assets/js/111.5e38e353.js"><link rel="prefetch" href="/assets/js/112.263d7f3a.js"><link rel="prefetch" href="/assets/js/113.5e75b121.js"><link rel="prefetch" href="/assets/js/114.0847f73d.js"><link rel="prefetch" href="/assets/js/115.d420c57d.js"><link rel="prefetch" href="/assets/js/116.13fd0db6.js"><link rel="prefetch" href="/assets/js/117.1bbe8645.js"><link rel="prefetch" href="/assets/js/118.ee6d3618.js"><link rel="prefetch" href="/assets/js/119.0e407035.js"><link rel="prefetch" href="/assets/js/12.ed04eee7.js"><link rel="prefetch" href="/assets/js/120.7f84c2fe.js"><link rel="prefetch" href="/assets/js/121.96d1e763.js"><link rel="prefetch" href="/assets/js/122.84798eb3.js"><link rel="prefetch" href="/assets/js/123.17e7c736.js"><link rel="prefetch" href="/assets/js/124.150bcb7e.js"><link rel="prefetch" href="/assets/js/125.646b5c45.js"><link rel="prefetch" href="/assets/js/126.bf215ad1.js"><link rel="prefetch" href="/assets/js/127.9d69ce7e.js"><link rel="prefetch" href="/assets/js/128.333e7a8f.js"><link rel="prefetch" href="/assets/js/129.023235e7.js"><link rel="prefetch" href="/assets/js/13.5b2be678.js"><link rel="prefetch" href="/assets/js/130.60729bcf.js"><link rel="prefetch" href="/assets/js/14.ae643708.js"><link rel="prefetch" href="/assets/js/15.8799ad1f.js"><link rel="prefetch" href="/assets/js/16.57fabb9d.js"><link rel="prefetch" href="/assets/js/17.6643e174.js"><link rel="prefetch" href="/assets/js/18.798ee422.js"><link rel="prefetch" href="/assets/js/19.8e78a4a8.js"><link rel="prefetch" href="/assets/js/20.8eb93a3f.js"><link rel="prefetch" href="/assets/js/21.313aeda1.js"><link rel="prefetch" href="/assets/js/22.7249e444.js"><link rel="prefetch" href="/assets/js/23.3205927b.js"><link rel="prefetch" href="/assets/js/24.56163c63.js"><link rel="prefetch" href="/assets/js/25.7606d40e.js"><link rel="prefetch" href="/assets/js/26.2084fa89.js"><link rel="prefetch" href="/assets/js/27.c63b3007.js"><link rel="prefetch" href="/assets/js/28.7179d362.js"><link rel="prefetch" href="/assets/js/29.a3f5030b.js"><link rel="prefetch" href="/assets/js/30.325cb30d.js"><link rel="prefetch" href="/assets/js/31.70bbbc9e.js"><link rel="prefetch" href="/assets/js/32.2b5a75d1.js"><link rel="prefetch" href="/assets/js/33.514736e0.js"><link rel="prefetch" href="/assets/js/34.b39fb69c.js"><link rel="prefetch" href="/assets/js/35.b07dc97a.js"><link rel="prefetch" href="/assets/js/36.00a7b953.js"><link rel="prefetch" href="/assets/js/37.c0480cf7.js"><link rel="prefetch" href="/assets/js/38.66fef806.js"><link rel="prefetch" href="/assets/js/39.797367a3.js"><link rel="prefetch" href="/assets/js/41.2e816b78.js"><link rel="prefetch" href="/assets/js/42.92c82759.js"><link rel="prefetch" href="/assets/js/43.e1222269.js"><link rel="prefetch" href="/assets/js/44.4315bac2.js"><link rel="prefetch" href="/assets/js/45.2046da9b.js"><link rel="prefetch" href="/assets/js/46.956eab07.js"><link rel="prefetch" href="/assets/js/47.f717ccd9.js"><link rel="prefetch" href="/assets/js/48.0eaf23ce.js"><link rel="prefetch" href="/assets/js/49.a20e4118.js"><link rel="prefetch" href="/assets/js/50.9277dfef.js"><link rel="prefetch" href="/assets/js/51.b8aa901a.js"><link rel="prefetch" href="/assets/js/52.8ceba72e.js"><link rel="prefetch" href="/assets/js/53.7dda82b8.js"><link rel="prefetch" href="/assets/js/54.99ab54d6.js"><link rel="prefetch" href="/assets/js/55.addd7113.js"><link rel="prefetch" href="/assets/js/56.3db3e473.js"><link rel="prefetch" href="/assets/js/57.3a5f4e8b.js"><link rel="prefetch" href="/assets/js/58.e9cd10cf.js"><link rel="prefetch" href="/assets/js/59.2ed6f60e.js"><link rel="prefetch" href="/assets/js/60.c9a9f104.js"><link rel="prefetch" href="/assets/js/61.143b23c4.js"><link rel="prefetch" href="/assets/js/62.e520a4c0.js"><link rel="prefetch" href="/assets/js/63.b752d03e.js"><link rel="prefetch" href="/assets/js/64.a504d860.js"><link rel="prefetch" href="/assets/js/65.e0ae9285.js"><link rel="prefetch" href="/assets/js/66.99126770.js"><link rel="prefetch" href="/assets/js/67.6902ff09.js"><link rel="prefetch" href="/assets/js/68.aa00e23d.js"><link rel="prefetch" href="/assets/js/69.9cd96dd9.js"><link rel="prefetch" href="/assets/js/7.4ffeed32.js"><link rel="prefetch" href="/assets/js/70.fa8c2f1f.js"><link rel="prefetch" href="/assets/js/71.72f6f14f.js"><link rel="prefetch" href="/assets/js/72.d3a196ba.js"><link rel="prefetch" href="/assets/js/73.ea61112f.js"><link rel="prefetch" href="/assets/js/74.f82dae1e.js"><link rel="prefetch" href="/assets/js/75.8e22988c.js"><link rel="prefetch" href="/assets/js/76.117375b4.js"><link rel="prefetch" href="/assets/js/77.719c150e.js"><link rel="prefetch" href="/assets/js/78.3d3e5f4c.js"><link rel="prefetch" href="/assets/js/79.32baf99c.js"><link rel="prefetch" href="/assets/js/8.0cc9628b.js"><link rel="prefetch" href="/assets/js/80.4534f20b.js"><link rel="prefetch" href="/assets/js/81.d75c3579.js"><link rel="prefetch" href="/assets/js/82.c12eb47e.js"><link rel="prefetch" href="/assets/js/83.00ecf2a2.js"><link rel="prefetch" href="/assets/js/84.0a8865df.js"><link rel="prefetch" href="/assets/js/85.b560db36.js"><link rel="prefetch" href="/assets/js/86.41790f39.js"><link rel="prefetch" href="/assets/js/87.674fd957.js"><link rel="prefetch" href="/assets/js/88.d901c05f.js"><link rel="prefetch" href="/assets/js/89.08269cd2.js"><link rel="prefetch" href="/assets/js/9.d7e30dda.js"><link rel="prefetch" href="/assets/js/90.dd95491f.js"><link rel="prefetch" href="/assets/js/91.5ae85c0b.js"><link rel="prefetch" href="/assets/js/92.b49a368c.js"><link rel="prefetch" href="/assets/js/93.093f2731.js"><link rel="prefetch" href="/assets/js/94.9d5a95c5.js"><link rel="prefetch" href="/assets/js/95.58e9eae9.js"><link rel="prefetch" href="/assets/js/96.6bb9a83a.js"><link rel="prefetch" href="/assets/js/97.6c78dfb3.js"><link rel="prefetch" href="/assets/js/98.06d27f14.js"><link rel="prefetch" href="/assets/js/99.1de4f713.js"><link rel="prefetch" href="/assets/js/vendors~cookielaw.b91b70be.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.c8a67369.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.075bd052.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/logo_light.svg" alt="AtomicDEX Documentation" class="logo"></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/basic-docs/atomicdex/introduction-to-atomicdex.html" class="nav-link">
+  Docs
+</a></div><div class="nav-item"><a href="/basic-docs/atomicdex-api-legacy/rational_number_note.html" class="nav-link">
+  API (Legacy)
+</a></div><div class="nav-item"><a href="/basic-docs/atomicdex-api-20/" class="nav-link router-link-active">
+  API 2.0 (Master)
+</a></div><div class="nav-item"><a href="/basic-docs/atomicdex-api-20-dev/" class="nav-link">
+  API 2.0 (Dev)
+</a></div><div class="nav-item"><a href="https://atomicdex.io" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Atomicdex.io
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://komodoplatform.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  KomodoPlatform.com
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <a href="https://github.com/KomodoPlatform/AtomicDEX-docs" target="_blank" rel="noopener noreferrer" class="repo-link">
+    Github
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/basic-docs/atomicdex/introduction-to-atomicdex.html" class="nav-link">
+  Docs
+</a></div><div class="nav-item"><a href="/basic-docs/atomicdex-api-legacy/rational_number_note.html" class="nav-link">
+  API (Legacy)
+</a></div><div class="nav-item"><a href="/basic-docs/atomicdex-api-20/" class="nav-link router-link-active">
+  API 2.0 (Master)
+</a></div><div class="nav-item"><a href="/basic-docs/atomicdex-api-20-dev/" class="nav-link">
+  API 2.0 (Dev)
+</a></div><div class="nav-item"><a href="https://atomicdex.io" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Atomicdex.io
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://komodoplatform.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  KomodoPlatform.com
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <a href="https://github.com/KomodoPlatform/AtomicDEX-docs" target="_blank" rel="noopener noreferrer" class="repo-link">
+    Github
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>AtomicDEX API 2.0 (Master)</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/basic-docs/atomicdex-api-20/" aria-current="page" class="sidebar-link">AtomicDEX-API RPC Protocol v2.0 (Master)</a></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>Coin Activation</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>Market Maker Bot</span> <span class="arrow right"></span></p> <!----></section></li><li><a href="/basic-docs/atomicdex-api-20/message_signing.html" class="sidebar-link">Message Signing</a></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>Orders</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>Seednode Version Stats</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>Staking</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading open"><span>Swaps</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/basic-docs/atomicdex-api-20/recreate_swap_data.html" aria-current="page" class="active sidebar-link">recreate_swap_data</a></li><li><a href="/basic-docs/atomicdex-api-20/trade_preimage.html" class="sidebar-link">trade_preimage</a></li></ul></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>Wallet</span> <span class="arrow right"></span></p> <!----></section></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="recreate-swap-data"><a href="#recreate-swap-data" class="header-anchor">#</a> recreate_swap_data</h1> <p>The <code>recreate_swap_data</code> can assist in the event of local stored swap data being lost due to storage errors related to low disk space or hardware failure, and if required, aid with the refunding of failed swaps.</p> <p>To source the opposite side of the trade, please <a href="https://discord.gg/RRZ8hzc" target="_blank" rel="noopener noreferrer">contact the Komodo Support team on Discord<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>. You will need to provide details about the trade you are trying to recover, such as the coins and amounts being traded, the approximate time of the trade, any known transaction IDs involved in the trade, and if available the UUID of the trade.</p> <h4 id="arguments"><a href="#arguments" class="header-anchor">#</a> Arguments</h4> <table><thead><tr><th>Structure</th> <th>Type</th> <th>Description</th></tr></thead> <tbody><tr><td>swap</td> <td>object</td> <td>Swap data from other side of trade. For example to recreate a Maker's swap data, the input would be the corresponding Taker's swap data</td></tr></tbody></table> <h4 id="response"><a href="#response" class="header-anchor">#</a> Response</h4> <table><thead><tr><th>Structure</th> <th>Type</th> <th>Description</th></tr></thead> <tbody><tr><td>result</td> <td>object</td> <td>Opposite side's swap data. For example if a Taker's swap data is input, the reponse would be the corresponding Maker's swap data.</td></tr></tbody></table> <h4 id="examples"><a href="#examples" class="header-anchor">#</a> 📌 Examples</h4> <h4 id="command"><a href="#command" class="header-anchor">#</a> Command</h4> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">curl</span> --url <span class="token string">&quot;http://127.0.0.1:7783&quot;</span> --data <span class="token string">&quot;
+{
+     <span class="token entity" title="\&quot;">\&quot;</span>userpass<span class="token entity" title="\&quot;">\&quot;</span>: <span class="token entity" title="\&quot;">\&quot;</span><span class="token variable">${userpass}</span><span class="token entity" title="\&quot;">\&quot;</span>,
+     <span class="token entity" title="\&quot;">\&quot;</span>mmrpc<span class="token entity" title="\&quot;">\&quot;</span>: <span class="token entity" title="\&quot;">\&quot;</span>2.0<span class="token entity" title="\&quot;">\&quot;</span>,
+     <span class="token entity" title="\&quot;">\&quot;</span>method<span class="token entity" title="\&quot;">\&quot;</span>: <span class="token entity" title="\&quot;">\&quot;</span>recreate_swap_data<span class="token entity" title="\&quot;">\&quot;</span>,
+     <span class="token entity" title="\&quot;">\&quot;</span>params<span class="token entity" title="\&quot;">\&quot;</span>: {
+          <span class="token entity" title="\&quot;">\&quot;</span>swap<span class="token entity" title="\&quot;">\&quot;</span>: {
+              <span class="token entity" title="\&quot;">\&quot;</span>type<span class="token entity" title="\&quot;">\&quot;</span>: <span class="token entity" title="\&quot;">\&quot;</span>Taker<span class="token entity" title="\&quot;">\&quot;</span>,
+              <span class="token entity" title="\&quot;">\&quot;</span>uuid<span class="token entity" title="\&quot;">\&quot;</span>: <span class="token entity" title="\&quot;">\&quot;</span>f87fa9ce-0820-4675-b85d-db18c7bc9fb4<span class="token entity" title="\&quot;">\&quot;</span>,
+              <span class="token entity" title="\&quot;">\&quot;</span>my_order_uuid<span class="token entity" title="\&quot;">\&quot;</span>: <span class="token entity" title="\&quot;">\&quot;</span>f87fa9ce-0820-4675-b85d-db18c7bc9fb4<span class="token entity" title="\&quot;">\&quot;</span>,
+              <span class="token entity" title="\&quot;">\&quot;</span>events<span class="token entity" title="\&quot;">\&quot;</span>: [
+                  {
+                      <span class="token entity" title="\&quot;">\&quot;</span>timestamp<span class="token entity" title="\&quot;">\&quot;</span>: 1638984440546,
+                      <span class="token entity" title="\&quot;">\&quot;</span>event<span class="token entity" title="\&quot;">\&quot;</span>: {
+                          <span class="token entity" title="\&quot;">\&quot;</span>type<span class="token entity" title="\&quot;">\&quot;</span>: <span class="token entity" title="\&quot;">\&quot;</span>Started<span class="token entity" title="\&quot;">\&quot;</span>,
+                          <span class="token entity" title="\&quot;">\&quot;</span>data<span class="token entity" title="\&quot;">\&quot;</span>: {
+                              <span class="token entity" title="\&quot;">\&quot;</span>taker_coin<span class="token entity" title="\&quot;">\&quot;</span>: <span class="token entity" title="\&quot;">\&quot;</span>MORTY<span class="token entity" title="\&quot;">\&quot;</span>,
+                              <span class="token entity" title="\&quot;">\&quot;</span>maker_coin<span class="token entity" title="\&quot;">\&quot;</span>: <span class="token entity" title="\&quot;">\&quot;</span>RICK<span class="token entity" title="\&quot;">\&quot;</span>,
+                              <span class="token entity" title="\&quot;">\&quot;</span>maker<span class="token entity" title="\&quot;">\&quot;</span>: <span class="token entity" title="\&quot;">\&quot;</span>15d9c51c657ab1be4ae9d3ab6e76a619d3bccfe830d5363fa168424c0d044732<span class="token entity" title="\&quot;">\&quot;</span>,
+                              <span class="token entity" title="\&quot;">\&quot;</span>my_persistent_pub<span class="token entity" title="\&quot;">\&quot;</span>: <span class="token entity" title="\&quot;">\&quot;</span>03b1e544ce2d860219bc91314b5483421a553a7b33044659eff0be9214ed58addd<span class="token entity" title="\&quot;">\&quot;</span>,
+                              <span class="token entity" title="\&quot;">\&quot;</span>lock_duration<span class="token entity" title="\&quot;">\&quot;</span>: 7800,
+                              <span class="token entity" title="\&quot;">\&quot;</span>maker_amount<span class="token entity" title="\&quot;">\&quot;</span>: <span class="token entity" title="\&quot;">\&quot;</span>0.9090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909091<span class="token entity" title="\&quot;">\&quot;</span>,
+                              <span class="token entity" title="\&quot;">\&quot;</span>taker_amount<span class="token entity" title="\&quot;">\&quot;</span>: <span class="token entity" title="\&quot;">\&quot;</span>1<span class="token entity" title="\&quot;">\&quot;</span>,
+                              <span class="token entity" title="\&quot;">\&quot;</span>maker_payment_confirmations<span class="token entity" title="\&quot;">\&quot;</span>: 1,
+                              <span class="token entity" title="\&quot;">\&quot;</span>maker_payment_requires_nota<span class="token entity" title="\&quot;">\&quot;</span>: false,
+                              <span class="token entity" title="\&quot;">\&quot;</span>taker_payment_confirmations<span class="token entity" title="\&quot;">\&quot;</span>: 1,
+                              <span class="token entity" title="\&quot;">\&quot;</span>taker_payment_requires_nota<span class="token entity" title="\&quot;">\&quot;</span>: false,
+                              <span class="token entity" title="\&quot;">\&quot;</span>taker_payment_lock<span class="token entity" title="\&quot;">\&quot;</span>: 1638992240,
+                              <span class="token entity" title="\&quot;">\&quot;</span>uuid<span class="token entity" title="\&quot;">\&quot;</span>: <span class="token entity" title="\&quot;">\&quot;</span>f87fa9ce-0820-4675-b85d-db18c7bc9fb4<span class="token entity" title="\&quot;">\&quot;</span>,
+                              <span class="token entity" title="\&quot;">\&quot;</span>started_at<span class="token entity" title="\&quot;">\&quot;</span>: 1638984440,
+                              <span class="token entity" title="\&quot;">\&quot;</span>maker_payment_wait<span class="token entity" title="\&quot;">\&quot;</span>: 1638987560,
+                              <span class="token entity" title="\&quot;">\&quot;</span>maker_coin_start_block<span class="token entity" title="\&quot;">\&quot;</span>: 1207822,
+                              <span class="token entity" title="\&quot;">\&quot;</span>taker_coin_start_block<span class="token entity" title="\&quot;">\&quot;</span>: 1222573,
+                              <span class="token entity" title="\&quot;">\&quot;</span>fee_to_send_taker_fee<span class="token entity" title="\&quot;">\&quot;</span>: {
+                                  <span class="token entity" title="\&quot;">\&quot;</span>coin<span class="token entity" title="\&quot;">\&quot;</span>: <span class="token entity" title="\&quot;">\&quot;</span>MORTY<span class="token entity" title="\&quot;">\&quot;</span>,
+                                  <span class="token entity" title="\&quot;">\&quot;</span>amount<span class="token entity" title="\&quot;">\&quot;</span>: <span class="token entity" title="\&quot;">\&quot;</span>0.00001<span class="token entity" title="\&quot;">\&quot;</span>,
+                                  <span class="token entity" title="\&quot;">\&quot;</span>paid_from_trading_vol<span class="token entity" title="\&quot;">\&quot;</span>: false
+                              },
+                              <span class="token entity" title="\&quot;">\&quot;</span>taker_payment_trade_fee<span class="token entity" title="\&quot;">\&quot;</span>: {
+                                  <span class="token entity" title="\&quot;">\&quot;</span>coin<span class="token entity" title="\&quot;">\&quot;</span>: <span class="token entity" title="\&quot;">\&quot;</span>MORTY<span class="token entity" title="\&quot;">\&quot;</span>,
+                                  <span class="token entity" title="\&quot;">\&quot;</span>amount<span class="token entity" title="\&quot;">\&quot;</span>: <span class="token entity" title="\&quot;">\&quot;</span>0.00001<span class="token entity" title="\&quot;">\&quot;</span>,
+                                  <span class="token entity" title="\&quot;">\&quot;</span>paid_from_trading_vol<span class="token entity" title="\&quot;">\&quot;</span>: false
+                              },
+                              <span class="token entity" title="\&quot;">\&quot;</span>maker_payment_spend_trade_fee<span class="token entity" title="\&quot;">\&quot;</span>: {
+                                  <span class="token entity" title="\&quot;">\&quot;</span>coin<span class="token entity" title="\&quot;">\&quot;</span>: <span class="token entity" title="\&quot;">\&quot;</span>RICK<span class="token entity" title="\&quot;">\&quot;</span>,
+                                  <span class="token entity" title="\&quot;">\&quot;</span>amount<span class="token entity" title="\&quot;">\&quot;</span>: <span class="token entity" title="\&quot;">\&quot;</span>0.00001<span class="token entity" title="\&quot;">\&quot;</span>,
+                                  <span class="token entity" title="\&quot;">\&quot;</span>paid_from_trading_vol<span class="token entity" title="\&quot;">\&quot;</span>: true
+                              }
+                          }
+                      }
+                  },
+                  {
+                      <span class="token entity" title="\&quot;">\&quot;</span>timestamp<span class="token entity" title="\&quot;">\&quot;</span>: 1638984456603,
+                      <span class="token entity" title="\&quot;">\&quot;</span>event<span class="token entity" title="\&quot;">\&quot;</span>: {
+                          <span class="token entity" title="\&quot;">\&quot;</span>type<span class="token entity" title="\&quot;">\&quot;</span>: <span class="token entity" title="\&quot;">\&quot;</span>Negotiated<span class="token entity" title="\&quot;">\&quot;</span>,
+                          <span class="token entity" title="\&quot;">\&quot;</span>data<span class="token entity" title="\&quot;">\&quot;</span>: {
+                              <span class="token entity" title="\&quot;">\&quot;</span>maker_payment_locktime<span class="token entity" title="\&quot;">\&quot;</span>: 1639000040,
+                              <span class="token entity" title="\&quot;">\&quot;</span>maker_pubkey<span class="token entity" title="\&quot;">\&quot;</span>: <span class="token entity" title="\&quot;">\&quot;</span>0315d9c51c657ab1be4ae9d3ab6e76a619d3bccfe830d5363fa168424c0d044732<span class="token entity" title="\&quot;">\&quot;</span>,
+                              <span class="token entity" title="\&quot;">\&quot;</span>secret_hash<span class="token entity" title="\&quot;">\&quot;</span>: <span class="token entity" title="\&quot;">\&quot;</span>4da9e7080175e8e10842e0e161b33cd298cab30b<span class="token entity" title="\&quot;">\&quot;</span>,
+                              <span class="token entity" title="\&quot;">\&quot;</span>maker_coin_swap_contract_addr<span class="token entity" title="\&quot;">\&quot;</span>: null,
+                              <span class="token entity" title="\&quot;">\&quot;</span>taker_coin_swap_contract_addr<span class="token entity" title="\&quot;">\&quot;</span>: null
+                          }
+                      }
+                  },
+                  {
+                      <span class="token entity" title="\&quot;">\&quot;</span>timestamp<span class="token entity" title="\&quot;">\&quot;</span>: 1638984456814,
+                      <span class="token entity" title="\&quot;">\&quot;</span>event<span class="token entity" title="\&quot;">\&quot;</span>: {
+                          <span class="token entity" title="\&quot;">\&quot;</span>type<span class="token entity" title="\&quot;">\&quot;</span>: <span class="token entity" title="\&quot;">\&quot;</span>TakerFeeSent<span class="token entity" title="\&quot;">\&quot;</span>,
+                          <span class="token entity" title="\&quot;">\&quot;</span>data<span class="token entity" title="\&quot;">\&quot;</span>: {
+                              <span class="token entity" title="\&quot;">\&quot;</span>tx_hex<span class="token entity" title="\&quot;">\&quot;</span>: <span class="token entity" title="\&quot;">\&quot;</span>0400008085202f89016383e8aced2256378bb126a1ca1a41e2f344d9295f65b3ea4b99055c5eb4a6cb000000006a47304402201c7e661e0dbeb9b3eb6e4e9e3194010e5772227017772b2e48c1b8d48ed3b21f02201c2eda64e74455fa1878a5c221f25d22fe626abd0078a26a9fc0f829e0921639012103b1e544ce2d860219bc91314b5483421a553a7b33044659eff0be9214ed58adddffffffff02bcf60100000000001976a914ca1e04745e8ca0c60d8c5881531d51bec470743f88ac74c3e90b000000001976a91483762a373935ca241d557dfce89171d582b486de88ac08ebb061000000000000000000000000000000<span class="token entity" title="\&quot;">\&quot;</span>,
+                              <span class="token entity" title="\&quot;">\&quot;</span>tx_hash<span class="token entity" title="\&quot;">\&quot;</span>: <span class="token entity" title="\&quot;">\&quot;</span>fcb49167c79e8e014143643b94878866f7e80b26c5a5dcf693010543da70b5bc<span class="token entity" title="\&quot;">\&quot;</span>
+                          }
+                      }
+                  },
+                  {
+                      <span class="token entity" title="\&quot;">\&quot;</span>timestamp<span class="token entity" title="\&quot;">\&quot;</span>: 1638984457822,
+                      <span class="token entity" title="\&quot;">\&quot;</span>event<span class="token entity" title="\&quot;">\&quot;</span>: {
+                          <span class="token entity" title="\&quot;">\&quot;</span>type<span class="token entity" title="\&quot;">\&quot;</span>: <span class="token entity" title="\&quot;">\&quot;</span>MakerPaymentReceived<span class="token entity" title="\&quot;">\&quot;</span>,
+                          <span class="token entity" title="\&quot;">\&quot;</span>data<span class="token entity" title="\&quot;">\&quot;</span>: {
+                              <span class="token entity" title="\&quot;">\&quot;</span>tx_hex<span class="token entity" title="\&quot;">\&quot;</span>: <span class="token entity" title="\&quot;">\&quot;</span>0400008085202f8901c41fdf6b9d8aea4b472f83e4fa0d99dfafc245e897d681fd2ca7df30707fbf48020000006b483045022100c7b294bd46cbf3b13530879a43c5cf67414047266d8b64c3c7263b5e75b989ba02201974f38d688b184bc44e628806c6ab2ac9092f394729d0ce838f14e1e76117c001210315d9c51c657ab1be4ae9d3ab6e76a619d3bccfe830d5363fa168424c0d044732ffffffff03a2296b050000000017a91491c45f69e1760c12a1f90fb2a811f6dfde35cc35870000000000000000166a144da9e7080175e8e10842e0e161b33cd298cab30bac503d64000000001976a9141462c3dd3f936d595c9af55978003b27c250441f88ac09ebb061000000000000000000000000000000<span class="token entity" title="\&quot;">\&quot;</span>,
+                              <span class="token entity" title="\&quot;">\&quot;</span>tx_hash<span class="token entity" title="\&quot;">\&quot;</span>: <span class="token entity" title="\&quot;">\&quot;</span>6287e0d30951cd859bfb837eb1e5409f7596e75ffeb2e61fd6df1843bfd0203d<span class="token entity" title="\&quot;">\&quot;</span>
+                          }
+                      }
+                  },
+                  {
+                      <span class="token entity" title="\&quot;">\&quot;</span>timestamp<span class="token entity" title="\&quot;">\&quot;</span>: 1638984457826,
+                      <span class="token entity" title="\&quot;">\&quot;</span>event<span class="token entity" title="\&quot;">\&quot;</span>: {
+                          <span class="token entity" title="\&quot;">\&quot;</span>type<span class="token entity" title="\&quot;">\&quot;</span>: <span class="token entity" title="\&quot;">\&quot;</span>MakerPaymentWaitConfirmStarted<span class="token entity" title="\&quot;">\&quot;</span>
+                      }
+                  },
+                  {
+                      <span class="token entity" title="\&quot;">\&quot;</span>timestamp<span class="token entity" title="\&quot;">\&quot;</span>: 1638984503611,
+                      <span class="token entity" title="\&quot;">\&quot;</span>event<span class="token entity" title="\&quot;">\&quot;</span>: {
+                          <span class="token entity" title="\&quot;">\&quot;</span>type<span class="token entity" title="\&quot;">\&quot;</span>: <span class="token entity" title="\&quot;">\&quot;</span>MakerPaymentWaitConfirmFailed<span class="token entity" title="\&quot;">\&quot;</span>,
+                          <span class="token entity" title="\&quot;">\&quot;</span>data<span class="token entity" title="\&quot;">\&quot;</span>: {
+                              <span class="token entity" title="\&quot;">\&quot;</span>error<span class="token entity" title="\&quot;">\&quot;</span>: <span class="token entity" title="\&quot;">\&quot;</span>An error<span class="token entity" title="\&quot;">\&quot;</span>
+                          }
+                      }
+                  },
+                  {
+                      <span class="token entity" title="\&quot;">\&quot;</span>timestamp<span class="token entity" title="\&quot;">\&quot;</span>: 1638984503615,
+                      <span class="token entity" title="\&quot;">\&quot;</span>event<span class="token entity" title="\&quot;">\&quot;</span>: {
+                          <span class="token entity" title="\&quot;">\&quot;</span>type<span class="token entity" title="\&quot;">\&quot;</span>: <span class="token entity" title="\&quot;">\&quot;</span>Finished<span class="token entity" title="\&quot;">\&quot;</span>
+                      }
+                  }
+              ],
+              <span class="token entity" title="\&quot;">\&quot;</span>maker_amount<span class="token entity" title="\&quot;">\&quot;</span>: <span class="token entity" title="\&quot;">\&quot;</span>0.9090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909091<span class="token entity" title="\&quot;">\&quot;</span>,
+              <span class="token entity" title="\&quot;">\&quot;</span>maker_coin<span class="token entity" title="\&quot;">\&quot;</span>: <span class="token entity" title="\&quot;">\&quot;</span>RICK<span class="token entity" title="\&quot;">\&quot;</span>,
+              <span class="token entity" title="\&quot;">\&quot;</span>taker_amount<span class="token entity" title="\&quot;">\&quot;</span>: <span class="token entity" title="\&quot;">\&quot;</span>1<span class="token entity" title="\&quot;">\&quot;</span>,
+              <span class="token entity" title="\&quot;">\&quot;</span>taker_coin<span class="token entity" title="\&quot;">\&quot;</span>: <span class="token entity" title="\&quot;">\&quot;</span>MORTY<span class="token entity" title="\&quot;">\&quot;</span>,
+              <span class="token entity" title="\&quot;">\&quot;</span>gui<span class="token entity" title="\&quot;">\&quot;</span>: <span class="token entity" title="\&quot;">\&quot;</span>atomicDEX 0.5.1 iOS<span class="token entity" title="\&quot;">\&quot;</span>,
+              <span class="token entity" title="\&quot;">\&quot;</span>mm_version<span class="token entity" title="\&quot;">\&quot;</span>: <span class="token entity" title="\&quot;">\&quot;</span>1b065636a<span class="token entity" title="\&quot;">\&quot;</span>,
+              <span class="token entity" title="\&quot;">\&quot;</span>success_events<span class="token entity" title="\&quot;">\&quot;</span>: [
+                  <span class="token entity" title="\&quot;">\&quot;</span>Started<span class="token entity" title="\&quot;">\&quot;</span>,
+                  <span class="token entity" title="\&quot;">\&quot;</span>Negotiated<span class="token entity" title="\&quot;">\&quot;</span>,
+                  <span class="token entity" title="\&quot;">\&quot;</span>TakerFeeSent<span class="token entity" title="\&quot;">\&quot;</span>,
+                  <span class="token entity" title="\&quot;">\&quot;</span>MakerPaymentReceived<span class="token entity" title="\&quot;">\&quot;</span>,
+                  <span class="token entity" title="\&quot;">\&quot;</span>MakerPaymentWaitConfirmStarted<span class="token entity" title="\&quot;">\&quot;</span>,
+                  <span class="token entity" title="\&quot;">\&quot;</span>MakerPaymentValidatedAndConfirmed<span class="token entity" title="\&quot;">\&quot;</span>,
+                  <span class="token entity" title="\&quot;">\&quot;</span>TakerPaymentSent<span class="token entity" title="\&quot;">\&quot;</span>,
+                  <span class="token entity" title="\&quot;">\&quot;</span>TakerPaymentSpent<span class="token entity" title="\&quot;">\&quot;</span>,
+                  <span class="token entity" title="\&quot;">\&quot;</span>MakerPaymentSpent<span class="token entity" title="\&quot;">\&quot;</span>,
+                  <span class="token entity" title="\&quot;">\&quot;</span>Finished<span class="token entity" title="\&quot;">\&quot;</span>
+              ],
+              <span class="token entity" title="\&quot;">\&quot;</span>error_events<span class="token entity" title="\&quot;">\&quot;</span>: [
+                  <span class="token entity" title="\&quot;">\&quot;</span>StartFailed<span class="token entity" title="\&quot;">\&quot;</span>,
+                  <span class="token entity" title="\&quot;">\&quot;</span>NegotiateFailed<span class="token entity" title="\&quot;">\&quot;</span>,
+                  <span class="token entity" title="\&quot;">\&quot;</span>TakerFeeSendFailed<span class="token entity" title="\&quot;">\&quot;</span>,
+                  <span class="token entity" title="\&quot;">\&quot;</span>MakerPaymentValidateFailed<span class="token entity" title="\&quot;">\&quot;</span>,
+                  <span class="token entity" title="\&quot;">\&quot;</span>MakerPaymentWaitConfirmFailed<span class="token entity" title="\&quot;">\&quot;</span>,
+                  <span class="token entity" title="\&quot;">\&quot;</span>TakerPaymentTransactionFailed<span class="token entity" title="\&quot;">\&quot;</span>,
+                  <span class="token entity" title="\&quot;">\&quot;</span>TakerPaymentWaitConfirmFailed<span class="token entity" title="\&quot;">\&quot;</span>,
+                  <span class="token entity" title="\&quot;">\&quot;</span>TakerPaymentDataSendFailed<span class="token entity" title="\&quot;">\&quot;</span>,
+                  <span class="token entity" title="\&quot;">\&quot;</span>TakerPaymentWaitForSpendFailed<span class="token entity" title="\&quot;">\&quot;</span>,
+                  <span class="token entity" title="\&quot;">\&quot;</span>MakerPaymentSpendFailed<span class="token entity" title="\&quot;">\&quot;</span>,
+                  <span class="token entity" title="\&quot;">\&quot;</span>TakerPaymentWaitRefundStarted<span class="token entity" title="\&quot;">\&quot;</span>,
+                  <span class="token entity" title="\&quot;">\&quot;</span>TakerPaymentRefunded<span class="token entity" title="\&quot;">\&quot;</span>,
+                  <span class="token entity" title="\&quot;">\&quot;</span>TakerPaymentRefundFailed<span class="token entity" title="\&quot;">\&quot;</span>
+              ]
+          }
+     },
+     <span class="token entity" title="\&quot;">\&quot;</span>id<span class="token entity" title="\&quot;">\&quot;</span>: 0
+}
+&quot;</span>
+</code></pre></div><div style="margin-top:0.5rem;"><div class="collapsed"><button>Show Response</button> <div style="display:none;"><h4 id="response-success"><a href="#response-success" class="header-anchor">#</a> Response (success)</h4> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+    <span class="token property">&quot;mmrpc&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2.0&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;result&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;swap&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Maker&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;uuid&quot;</span><span class="token operator">:</span> <span class="token string">&quot;f87fa9ce-0820-4675-b85d-db18c7bc9fb4&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;my_order_uuid&quot;</span><span class="token operator">:</span> <span class="token string">&quot;f87fa9ce-0820-4675-b85d-db18c7bc9fb4&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;events&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                <span class="token punctuation">{</span>
+                    <span class="token property">&quot;timestamp&quot;</span><span class="token operator">:</span> <span class="token number">1638984440546</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;event&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                        <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Started&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;data&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                            <span class="token property">&quot;taker_coin&quot;</span><span class="token operator">:</span> <span class="token string">&quot;MORTY&quot;</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;maker_coin&quot;</span><span class="token operator">:</span> <span class="token string">&quot;RICK&quot;</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;taker&quot;</span><span class="token operator">:</span> <span class="token string">&quot;b1e544ce2d860219bc91314b5483421a553a7b33044659eff0be9214ed58addd&quot;</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;secret&quot;</span><span class="token operator">:</span> <span class="token string">&quot;0000000000000000000000000000000000000000000000000000000000000000&quot;</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;secret_hash&quot;</span><span class="token operator">:</span> <span class="token string">&quot;4da9e7080175e8e10842e0e161b33cd298cab30b&quot;</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;my_persistent_pub&quot;</span><span class="token operator">:</span> <span class="token string">&quot;0315d9c51c657ab1be4ae9d3ab6e76a619d3bccfe830d5363fa168424c0d044732&quot;</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;lock_duration&quot;</span><span class="token operator">:</span> <span class="token number">7800</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;maker_amount&quot;</span><span class="token operator">:</span> <span class="token string">&quot;0.9090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909091&quot;</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;taker_amount&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1&quot;</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;maker_payment_confirmations&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;maker_payment_requires_nota&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;taker_payment_confirmations&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;taker_payment_requires_nota&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;maker_payment_lock&quot;</span><span class="token operator">:</span> <span class="token number">1639000040</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;uuid&quot;</span><span class="token operator">:</span> <span class="token string">&quot;f87fa9ce-0820-4675-b85d-db18c7bc9fb4&quot;</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;started_at&quot;</span><span class="token operator">:</span> <span class="token number">1638984440</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;maker_coin_start_block&quot;</span><span class="token operator">:</span> <span class="token number">1207822</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;taker_coin_start_block&quot;</span><span class="token operator">:</span> <span class="token number">1222573</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;maker_payment_trade_fee&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;taker_payment_spend_trade_fee&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span>
+                        <span class="token punctuation">}</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token punctuation">{</span>
+                    <span class="token property">&quot;timestamp&quot;</span><span class="token operator">:</span> <span class="token number">1638984456603</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;event&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                        <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Negotiated&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;data&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                            <span class="token property">&quot;taker_payment_locktime&quot;</span><span class="token operator">:</span> <span class="token number">1638992240</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;taker_pubkey&quot;</span><span class="token operator">:</span> <span class="token string">&quot;03b1e544ce2d860219bc91314b5483421a553a7b33044659eff0be9214ed58addd&quot;</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;maker_coin_swap_contract_addr&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;taker_coin_swap_contract_addr&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span>
+                        <span class="token punctuation">}</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token punctuation">{</span>
+                    <span class="token property">&quot;timestamp&quot;</span><span class="token operator">:</span> <span class="token number">1638984457822</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;event&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                        <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;TakerFeeValidated&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;data&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                            <span class="token property">&quot;tx_hex&quot;</span><span class="token operator">:</span> <span class="token string">&quot;0400008085202f89016383e8aced2256378bb126a1ca1a41e2f344d9295f65b3ea4b99055c5eb4a6cb000000006a47304402201c7e661e0dbeb9b3eb6e4e9e3194010e5772227017772b2e48c1b8d48ed3b21f02201c2eda64e74455fa1878a5c221f25d22fe626abd0078a26a9fc0f829e0921639012103b1e544ce2d860219bc91314b5483421a553a7b33044659eff0be9214ed58adddffffffff02bcf60100000000001976a914ca1e04745e8ca0c60d8c5881531d51bec470743f88ac74c3e90b000000001976a91483762a373935ca241d557dfce89171d582b486de88ac08ebb061000000000000000000000000000000&quot;</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;tx_hash&quot;</span><span class="token operator">:</span> <span class="token string">&quot;fcb49167c79e8e014143643b94878866f7e80b26c5a5dcf693010543da70b5bc&quot;</span>
+                        <span class="token punctuation">}</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token punctuation">{</span>
+                    <span class="token property">&quot;timestamp&quot;</span><span class="token operator">:</span> <span class="token number">1638984457822</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;event&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                        <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;MakerPaymentSent&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;data&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                            <span class="token property">&quot;tx_hex&quot;</span><span class="token operator">:</span> <span class="token string">&quot;0400008085202f8901c41fdf6b9d8aea4b472f83e4fa0d99dfafc245e897d681fd2ca7df30707fbf48020000006b483045022100c7b294bd46cbf3b13530879a43c5cf67414047266d8b64c3c7263b5e75b989ba02201974f38d688b184bc44e628806c6ab2ac9092f394729d0ce838f14e1e76117c001210315d9c51c657ab1be4ae9d3ab6e76a619d3bccfe830d5363fa168424c0d044732ffffffff03a2296b050000000017a91491c45f69e1760c12a1f90fb2a811f6dfde35cc35870000000000000000166a144da9e7080175e8e10842e0e161b33cd298cab30bac503d64000000001976a9141462c3dd3f936d595c9af55978003b27c250441f88ac09ebb061000000000000000000000000000000&quot;</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;tx_hash&quot;</span><span class="token operator">:</span> <span class="token string">&quot;6287e0d30951cd859bfb837eb1e5409f7596e75ffeb2e61fd6df1843bfd0203d&quot;</span>
+                        <span class="token punctuation">}</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token punctuation">{</span>
+                    <span class="token property">&quot;timestamp&quot;</span><span class="token operator">:</span> <span class="token number">1638984503611</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;event&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                        <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;TakerPaymentValidateFailed&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;data&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                            <span class="token property">&quot;error&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Origin Taker error event: MakerPaymentWaitConfirmFailed(SwapError { error: \&quot;An error\&quot; })&quot;</span>
+                        <span class="token punctuation">}</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token punctuation">{</span>
+                    <span class="token property">&quot;timestamp&quot;</span><span class="token operator">:</span> <span class="token number">1638984503611</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;event&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                        <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;MakerPaymentWaitRefundStarted&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;data&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                            <span class="token property">&quot;wait_until&quot;</span><span class="token operator">:</span> <span class="token number">1639003740</span>
+                        <span class="token punctuation">}</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;maker_amount&quot;</span><span class="token operator">:</span> <span class="token string">&quot;0.9090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909091&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;maker_coin&quot;</span><span class="token operator">:</span> <span class="token string">&quot;RICK&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;taker_amount&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;taker_coin&quot;</span><span class="token operator">:</span> <span class="token string">&quot;MORTY&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;gui&quot;</span><span class="token operator">:</span> <span class="token string">&quot;nogui&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;mm_version&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;success_events&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                <span class="token string">&quot;Started&quot;</span><span class="token punctuation">,</span>
+                <span class="token string">&quot;Negotiated&quot;</span><span class="token punctuation">,</span>
+                <span class="token string">&quot;TakerFeeValidated&quot;</span><span class="token punctuation">,</span>
+                <span class="token string">&quot;MakerPaymentSent&quot;</span><span class="token punctuation">,</span>
+                <span class="token string">&quot;TakerPaymentReceived&quot;</span><span class="token punctuation">,</span>
+                <span class="token string">&quot;TakerPaymentWaitConfirmStarted&quot;</span><span class="token punctuation">,</span>
+                <span class="token string">&quot;TakerPaymentValidatedAndConfirmed&quot;</span><span class="token punctuation">,</span>
+                <span class="token string">&quot;TakerPaymentSpent&quot;</span><span class="token punctuation">,</span>
+                <span class="token string">&quot;TakerPaymentSpendConfirmStarted&quot;</span><span class="token punctuation">,</span>
+                <span class="token string">&quot;TakerPaymentSpendConfirmed&quot;</span><span class="token punctuation">,</span>
+                <span class="token string">&quot;Finished&quot;</span>
+            <span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;error_events&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                <span class="token string">&quot;StartFailed&quot;</span><span class="token punctuation">,</span>
+                <span class="token string">&quot;NegotiateFailed&quot;</span><span class="token punctuation">,</span>
+                <span class="token string">&quot;TakerFeeValidateFailed&quot;</span><span class="token punctuation">,</span>
+                <span class="token string">&quot;MakerPaymentTransactionFailed&quot;</span><span class="token punctuation">,</span>
+                <span class="token string">&quot;MakerPaymentDataSendFailed&quot;</span><span class="token punctuation">,</span>
+                <span class="token string">&quot;MakerPaymentWaitConfirmFailed&quot;</span><span class="token punctuation">,</span>
+                <span class="token string">&quot;TakerPaymentValidateFailed&quot;</span><span class="token punctuation">,</span>
+                <span class="token string">&quot;TakerPaymentWaitConfirmFailed&quot;</span><span class="token punctuation">,</span>
+                <span class="token string">&quot;TakerPaymentSpendFailed&quot;</span><span class="token punctuation">,</span>
+                <span class="token string">&quot;TakerPaymentSpendConfirmFailed&quot;</span><span class="token punctuation">,</span>
+                <span class="token string">&quot;MakerPaymentWaitRefundStarted&quot;</span><span class="token punctuation">,</span>
+                <span class="token string">&quot;MakerPaymentRefunded&quot;</span><span class="token punctuation">,</span>
+                <span class="token string">&quot;MakerPaymentRefundFailed&quot;</span>
+            <span class="token punctuation">]</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span>
+<span class="token punctuation">}</span>
+</code></pre></div></div></div></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/KomodoPlatform/AtomicDEX-docs/edit/master/docs/basic-docs/atomicdex-api-20/recreate_swap_data.md" target="_blank" rel="noopener noreferrer">Suggest an improvement for this page</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">7 months ago</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/basic-docs/atomicdex-api-20/remove_delegation.html" class="prev">
+        remove_delegation
+      </a></span> <span class="next"><a href="/basic-docs/atomicdex-api-20/trade_preimage.html">
+        trade_preimage
+      </a>
+      →
+    </span></p></div> </main> <!----></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.7d6b3bfc.js" defer></script><script src="/assets/js/5.a7a1516b.js" defer></script><script src="/assets/js/4.fb8bc2c9.js" defer></script><script src="/assets/js/40.804b96ee.js" defer></script><script src="/assets/js/6.e14e0cf2.js" defer></script>
+  </body>
+</html>
