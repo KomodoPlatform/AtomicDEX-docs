@@ -16,7 +16,7 @@ var navbar = [
     link: "/basic-docs/atomicdex-api-20-dev/",
   },
   {
-    text: "Atomicdex.io",
+    text: "atomicdex.io",
     link: "https://atomicdex.io",
   },
   {

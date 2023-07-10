@@ -71,9 +71,9 @@ module.exports = {
       },
     ],
   ],
-  title: "AtomicDEX Documentation",
+  title: "Komodo DeFi Framwork Documentation",
   base: "/",
-  description: "Documentation for developers building on AtomicDEX",
+  description: "Documentation for developers building on Komodo DeFi Framwork",
   themeConfig: {
     repo: "KomodoPlatform/AtomicDEX-docs",
     repoLabel: "Github",
